@@ -1,0 +1,32 @@
+//
+//  group.pch
+//  Group
+//
+//  Created by home on 2017/7/25.
+//  Copyright © 2017年 qingpengwang. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+
+
+/**
+ *  获取屏幕宽度和高度
+ */
+#define AL_SCREEN_WIDTH ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+#define AL_SCREEN_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+
+#import "Masonry.h"
+#import "YYModel.h"
+#import "CZAdditions.h"
+#ifdef DEBUG // 开发阶段
+#define NSLog(...)  NSLog(__VA_ARGS__)
+#else // 发布阶段
+#define HMLog(...)
+#endif
+
+/**
+ *   添加到购物车通知名称
+ */
+
+#endif
